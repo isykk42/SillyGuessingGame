@@ -13,6 +13,13 @@ def play_guessing_game():
             guess = int(input("\nGuess a number between 1 and 25: "))
             attempts += 1
 
+            if guess < randomnumber:
+                print("\nToo low, try again!")
+
+            elif guess > randomnumber:
+                print("\nToo high, try again!")
+
+
         finally:
             if attempts > 25:
                 print("\nYou have ran out of attempts")
