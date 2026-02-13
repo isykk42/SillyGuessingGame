@@ -6,5 +6,16 @@ def play_guessing_game():
     attempts = 0
 
     print("Welcome to the (good code) Guessing Game !!!")
-    print("A number has been chosen randomly between 1 and 25! You have unlimited guesses and good luck!")
+    print("\nA number has been chosen randomly between 1 and 25! You have 25 guesses and good luck!")
+
+    while guess != randomnumber:
+        try:
+            guess = int(input("\nGuess a number between 1 and 25: "))
+            attempts += 1
+
+        finally:
+            if attempts > 25:
+                print("\nYou have ran out of attempts")
+                print("\nThe number was " + str(randomnumber))
+
 
